@@ -1,0 +1,18 @@
+{
+  "name": "fmf-alerts",
+  "version": "1.0.0",
+  "description": "Alerts for /r/frugalmalefashion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max Huddleston",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.3.0",
+    "nodemailer": "^5.1.1"
+  },
+  "devDependencies": {
+    "dotenv": "^6.2.0"
+  }
+}
