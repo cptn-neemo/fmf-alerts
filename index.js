@@ -1,5 +1,14 @@
 const fetch = require('node-fetch');
 
-fetch('https://reddit.com/r/frugalmalefashion.json')
-    .then(resp => resp.json())
-    .then(body => console.log(JSON.stringify(body)))
+const getPosts = () => {
+    return fetch('https://reddit.com/r/frugalmalefashion/new.json')
+        .then(resp => resp.json())
+}
+
+const parsePosts = async (body) => {
+    const posts = body.data.children.map(obj => obj.data);
+    console.log(posts[0])
+}
+
+getPosts()
+    .then(body => parsePosts(body))
